@@ -24,10 +24,21 @@ body {
 .date {
   display: flex;
   flex-direction: column;
-  color: hsl(345, 95%, 68%);
+
   font-size: 20px;
   padding: 10px;
   text-align: center;
+}
+
+.card {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: hsl(236, 21%, 26%);
+  border-radius: 10px;
+  color: hsl(345, 95%, 68%);
+  font-size: 50px;
+  font-weight: bold;
 }
 
 .footer {
