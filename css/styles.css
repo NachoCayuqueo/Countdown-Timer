@@ -8,28 +8,45 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
   background-image: url("../images/bg-stars.svg");
   background-color: hsl(234, 17%, 12%);
   color: white;
 }
 
+.body-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+
 .title {
   text-align: center;
+  letter-spacing: 5px;
 }
 .container {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
+}
+
+.segment-date {
+  color: hsl(345, 95%, 68%);
+  font-weight: bold;
+  font-size: 5em;
 }
 
 .card-date {
   position: relative;
   display: inline-flex;
   flex-direction: column;
-  box-shadow: 0 2px 5px 0 rgba(255, 0, 0, 0.9);
-  border-radius: 1px;
-  color: red;
-  font-size: 5em;
+  box-shadow: 0 10px 0px 0 hsl(234, 17%, 15%);
+  border-radius: 15px;
 }
 
 .card-date-top,
@@ -44,7 +61,8 @@ body {
 
 .card-date-top,
 .card-date .top-flip {
-  background-color: #f7f7f7;
+  background-color: hsl(235, 16%, 14%);
+  /* border-radius: 20px 20px 10px 10px; */
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -52,9 +70,10 @@ body {
 
 .card-date-bottom,
 .card-date .bottom-flip {
-  background-color: white;
+  background-color: hsl(236, 21%, 26%);
   display: flex;
   align-items: flex-end;
+  /* border-radius: 10px 10px 20px 20px; */
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -86,10 +105,32 @@ body {
 }
 
 .segment-title {
+  color: hsl(237, 18%, 59%);
   text-align: center;
+  letter-spacing: 5px;
 }
 
 .footer {
-  background-image: url("../images/pattern-hills.svg");
+  color: white; /* Cambia esto según tu diseño */
+  padding: 40px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   text-align: center;
+  background-image: url("../images/pattern-hills.svg");
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 20px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
