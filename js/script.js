@@ -1,8 +1,8 @@
 const countdown = () => {
-  const daysRemaining = document.getElementById("days");
-  const hoursRemaining = document.getElementById("hours");
-  const minutesRemaining = document.getElementById("minutes");
-  const secondsRemaining = document.getElementById("seconds");
+  const secondsCard = document.querySelector("#card-seconds");
+  const minutesCard = document.querySelector("#card-minutes");
+  const hoursCard = document.querySelector("#card-hours");
+  const daysCard = document.querySelector("#card-days");
 
   const currentDate = new Date().getTime();
   const endDate = new Date(2024, 1, 1).getTime();
@@ -14,10 +14,49 @@ const countdown = () => {
   const hours = minutes * 60;
   const days = hours * 24;
 
-  daysRemaining.innerHTML = Math.floor(dateDifference / days);
-  hoursRemaining.innerHTML = Math.floor(dateDifference / hours) % 24;
-  minutesRemaining.innerHTML = Math.floor(dateDifference / minutes) % 60;
-  secondsRemaining.innerHTML = Math.floor(dateDifference / seconds) % 60;
+  //* seconds
+  const secondsNumber = Math.floor(dateDifference / seconds) % 60;
+  const minutesNumber = Math.floor(dateDifference / minutes) % 60;
+  const hoursNumber = Math.floor(dateDifference / hours) % 24;
+  const daysNumber = Math.floor(dateDifference / days);
+
+  flip(secondsCard, secondsNumber);
+  flip(minutesCard, minutesNumber);
+  flip(hoursCard, hoursNumber);
+  flip(daysCard, daysNumber);
+};
+
+const flip = (card, startNumber) => {
+  const topHalf = card.querySelector(".card-date-top");
+  const number = parseInt(topHalf.textContent);
+
+  //* si es el mismo numero no genera efecto
+  if (number === startNumber) return;
+
+  const topFlip = document.createElement("div");
+  topFlip.classList.add("top-flip");
+
+  const bottomFlip = document.createElement("div");
+  bottomFlip.classList.add("bottom-flip");
+
+  const bottomHalf = card.querySelector(".card-date-bottom");
+
+  bottomHalf.textContent = number;
+  topFlip.textContent = number;
+  bottomFlip.textContent = startNumber;
+
+  topFlip.addEventListener("animationstart", (e) => {
+    topHalf.textContent = startNumber;
+  });
+  topFlip.addEventListener("animationend", (e) => {
+    topFlip.remove();
+  });
+  bottomFlip.addEventListener("animationend", (e) => {
+    bottomHalf.textContent = startNumber;
+    bottomFlip.remove();
+  });
+
+  card.append(topFlip, bottomFlip);
 };
 
 setInterval(countdown, 1000);
