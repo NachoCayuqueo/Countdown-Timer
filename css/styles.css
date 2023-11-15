@@ -1,44 +1,92 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap");
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Red Hat Text";
+}
+
 body {
   background-image: url("../images/bg-stars.svg");
-  background-color: hsl(235, 16%, 14%);
-  font-family: "Red Hat Text";
-  font-size: 14px;
+  background-color: hsl(234, 17%, 12%);
   color: white;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .title {
-  color: white;
-}
-.container-date {
-  display: flex;
-  flex-direction: row;
-}
-
-.date {
-  display: flex;
-  flex-direction: column;
-
-  font-size: 20px;
-  padding: 10px;
   text-align: center;
 }
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
 
-.card {
+.card-date {
+  position: relative;
   display: inline-flex;
   flex-direction: column;
-  padding: 30px;
-  background-color: hsl(236, 21%, 26%);
-  border-radius: 10px;
-  color: hsl(345, 95%, 68%);
-  font-size: 50px;
-  font-weight: bold;
+  box-shadow: 0 2px 5px 0 rgba(255, 0, 0, 0.9);
+  border-radius: 1px;
+  color: red;
+  font-size: 5em;
+}
+
+.card-date-top,
+.card-date-bottom,
+.card-date .top-flip,
+.card-date .bottom-flip {
+  height: 0.75em;
+  line-height: 1;
+  padding: 0.25em;
+  overflow: hidden;
+}
+
+.card-date-top,
+.card-date .top-flip {
+  background-color: #f7f7f7;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-date-bottom,
+.card-date .bottom-flip {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.card-date .top-flip {
+  position: absolute;
+  width: 100%;
+  animation: flip-top 250ms ease-in;
+  transform-origin: bottom;
+}
+@keyframes flip-top {
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+.card-date .bottom-flip {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: flip-bottom 250ms ease-out 250ms;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.segment-title {
+  text-align: center;
 }
 
 .footer {
