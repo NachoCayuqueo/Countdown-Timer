@@ -17,7 +17,7 @@
     <title>Frontend Mentor | Launch countdown timer</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
+    <!-- <style>
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -25,31 +25,52 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
-    </style>
+    </style> -->
   </head>
   <body>
+    <div class="title">
+      <h3>WE'RE LAUNCHING SOON</h3>
+    </div>
+
     <div class="container">
-      <div class="title">
-        <h3>WE'RE LAUNCHING SOON</h3>
+      <div class="container-date">
+        <div class="segment-date">
+          <div class="card-date" id="card-days">
+            <div class="card-date-top">00</div>
+            <div class="card-date-bottom">00</div>
+          </div>
+        </div>
+        <h5 class="segment-title">Days</h5>
       </div>
 
       <div class="container-date">
-        <div class="date">
-          <p id="days" class="card">00</p>
-          <h5>Days</h5>
+        <div class="segment-date">
+          <div class="card-date" id="card-hours">
+            <div class="card-date-top">00</div>
+            <div class="card-date-bottom">00</div>
+          </div>
         </div>
-        <div class="date">
-          <p id="hours" class="card">00</p>
-          <h5>Hours</h5>
+        <h5 class="segment-title">Hours</h5>
+      </div>
+
+      <div class="container-date">
+        <div class="segment-date">
+          <div class="card-date" id="card-minutes">
+            <div class="card-date-top">00</div>
+            <div class="card-date-bottom">00</div>
+          </div>
         </div>
-        <div class="date">
-          <p id="minutes" class="card">00</p>
-          <h5>Minutes</h5>
+        <h5 class="segment-title">Minutes</h5>
+      </div>
+
+      <div class="container-date">
+        <div class="segment-date">
+          <div class="card-date" id="card-seconds">
+            <div class="card-date-top">00</div>
+            <div class="card-date-bottom">00</div>
+          </div>
         </div>
-        <div class="date">
-          <p id="seconds" class="card">00</p>
-          <h5>Seconds</h5>
-        </div>
+        <h5 class="segment-title">Seconds</h5>
       </div>
     </div>
 
