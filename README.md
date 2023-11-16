@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/NachoCayuqueo/Countdown-Timer)
-- Live Site URL: [Count Down](yearly-countdown-timer.vercel.app)
+- Live Site URL: [Count Down](https://yearly-countdown-timer.vercel.app/)
 
 ## My process
 
