@@ -13,8 +13,6 @@ This is a solution to the [Launch countdown timer challenge on Frontend Mentor](
   - [What I learned](#what-i-learned)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -35,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/NachoCayuqueo/Countdown-Timer)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Count Down](yearly-countdown-timer.vercel.app)
 
 ## My process
 
