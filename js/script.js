@@ -7,7 +7,9 @@ function countdown() {
   const daysCard = document.querySelector("#card-days");
 
   const currentDate = new Date().getTime();
-  const endDate = new Date(2024, 0, 1).getTime();
+
+  const currentYear = new Date().getFullYear();
+  const endDate = new Date(`${currentYear + 1}`, 0, 1).getTime();
 
   const dateDifference = endDate - currentDate;
 
